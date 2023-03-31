@@ -1,24 +1,20 @@
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 #include "lists.h"
 
 /**
- * main - check the code
+ * list_len - returns the numbers of elements in a linked list_t list
+ * @h: pointer to the linked list_t
  *
- * Return: Always 0.
+ * Return: the number of elements in a linked list
  */
-int main(void)
-{
-    list_t *head;
-    list_t *new;
-    list_t hello = {"World", 5, NULL};
-    size_t n;
 
-    head = &hello;
-    new = malloc(sizeof(list_t));
-    if (new == NULL)
-    {
-        printf("Error\n");
-        return (1);
-    }
+size_t list_len(const list_t *h)
+{
+	size_t n = 0;
+
+	while (h != NULL)
+	{
+		n++;
+		h = h->next;
+	}
+	return (n);
+}
