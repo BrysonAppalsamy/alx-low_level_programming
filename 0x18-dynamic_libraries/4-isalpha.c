@@ -1,14 +1,20 @@
 #include "main.h"
+
 /**
- * _isalpha - checks if the letter is lower case
- * @c : character to check
- * Return:0 or 1
- */
-
+*_isalpha - Begin Here
+*@c: Character ASCII code
+*return 1 if lower or upper case and 0 otherwise
+*Return: Value 0 (true)
+*/
 int _isalpha(int c)
-
 {
-
-	return ((c >= 97 && c <= 122) || (c >= 65 && c <= 90));
-
+	if ((c <= 'Z' && c >= 'A') || (c >= 'a' && c <= 'z'))
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
+	_putchar('\n');
 }
